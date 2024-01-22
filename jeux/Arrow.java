@@ -20,12 +20,10 @@ public class Arrow extends GraphicsElement {
     public boolean collide(Apple apple){
         boolean is_collide = false;
 
-        // Vérifier si les segments verticaux du rectangle et du cercle se chevauchent
         if (
             this.x + this.longueur >= apple.getX() && this.x <= apple.getX() + apple.getRadius()
         ) {
 
-            // Vérifier si les segments horizontaux du rectangle et du cercle se chevauchent
             if (
                 this.y + this.largeur >= apple.getY() && this.y + this.largeur <= apple.getY() + apple.getRadius()
             ) {
